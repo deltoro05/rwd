@@ -1,48 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>RWD 4th edition</title>
-  </head>
-  <body>
-    <p>
-      In 2010, Ethan Marcotte coined the term
-      <a
-        href="https://alistapart.com/article/responsive-web-design"
-        target="_blank"
-        rel="noopener noreferrer"
-        >responsive web design</a
-      >
-      which is a unifified approach of three techniques:
-    </p>
-    <ul>
-      <li>
-        <a
-          href="https://github.com/benfrain/rwd4/tree/master/04"
-          target="_blank"
-          rel="noopener noreferrer"
-          >lexible grid layout</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/benfrain/rwd4/tree/master/09"
-          target="_blank"
-          rel="noopener noreferrer"
-          >flexible images/media</a
-        >
-      </li>
-      <li>
-        <a href="https://github.com/benfrain/rwd4/tree/master/03" target="_blank" rel="noopener noreferrer"
-          >media queries</a
-        >
-      </li>
-    </ul>
-    <p>
-      The <a href="https://web.dev/responsive-web-design-basics/#viewport" target="_blank" rel="noopener noreferrer"> viewport meta</a> tag tells the browser how to render a web page
-    </p>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>RWD 4th edition</title>
+</head>
+
+<body>
+  <p>
+    In 2010, Ethan Marcotte coined the term
+    <a href="https://alistapart.com/article/responsive-web-design" target="_blank" rel="noopener noreferrer">responsive
+      web design</a>
+    which is a unifified approach of three techniques:
+  </p>
+  <ul>
+    <li>
+      <a href="https://github.com/benfrain/rwd4/tree/master/04" target="_blank" rel="noopener noreferrer">lexible grid
+        layout</a>
+    </li>
+    <li>
+      <a href="https://github.com/benfrain/rwd4/tree/master/09" target="_blank" rel="noopener noreferrer">flexible
+        images/media</a>
+    </li>
+    <li>
+      <a href="https://github.com/benfrain/rwd4/tree/master/03" target="_blank" rel="noopener noreferrer">media
+        queries</a>
+    </li>
+  </ul>
+  <p>
+    The <a href="https://web.dev/responsive-web-design-basics/#viewport" target="_blank" rel="noopener noreferrer">
+      viewport meta</a> tag tells the browser how to render a web page
+  </p>
+  <p>
+    For images prefer <em>max-width</em> instead of <em>width</em>:
+  <pre><code>
+        img {
+          max-width: 100%;
+        }
+      </code></pre>
+  </p>
+  <p>Specifications for CSS Media Queries: <a href="https://www.w3.org/TR/mediaqueries-3" target="_blank"
+      rel="noopener noreferrer">level 3</a>; <a href="https://drafts.csswg.org/mediaqueries-4" target="_blank"
+      rel="noopener noreferrer">level 4</a></p>
+  <p>
+    The <a href="https://html.spec.whatwg.org/multipage" target="_blank" rel="noopener noreferrer">living standard</a>
+    of HTML
+  </p>
+  <p>
+    The <a href="https://html.spec.whatwg.org/multipage/syntax.html#void-elements" target="_blank"
+      rel="noopener noreferrer">void tags</a> are:
+    <code>area</code>,
+    <code>base</code>,
+    <code>br</code>,
+    <code>col</code>,
+    <code>embed</code>,
+    <code>hr</code>,
+    <code>img</code>,
+    <code>input</code>,
+    <code>link</code>,
+    <code>meta</code>,
+    <code>param</code>,
+    <code>param</code>,
+    <code>source</code>,
+    <code>track</code> and
+    <code>wbr</code>
+  </p>
+  <p>
+    Full list of <a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
+      target="_blank" rel="noopener noreferrer">languages</a> for the <code>lang</code> attribute
+  </p>
+  <p>
+    Pre-made "best practice" HTML5 <a href="https://github.com/h5bp/html5-boilerplate" target="_blank"
+      rel="noopener noreferrer">file</a>
+  </p>
+  <p>
+    Check if the markup is <a href="https://validator.w3.org" target="_blank" rel="noopener noreferrer">valid</a>
+  </p>
+  <p>
+    <code>a</code>,
+    <code>button</code>,
+    <code>form</code> can not be wrapped inside of an
+    <code>a</code> tag
+  </p>
+  <p>
+    Full list of HTML5 <a href="https://html.spec.whatwg.org/#semantics" target="_blank"
+      rel="noopener noreferrer">elements</a>
+  </p>
+  <p>Group the HTML elements by specification:</p>
+  <ul>
+    <li><a href="https://www.w3.org/WAI/ARIA/apg/example-index/landmarks/HTML5.html" target="_blank"
+        rel="noopener noreferrer">Sectioning</a> elements: (
+      <code>aside</code>,
+      <code>footer</code>,
+      <code>form</code>,
+      <code>header</code>,
+      <code>main</code>,
+      <code>nav</code>,
+      <code>section</code>)
+    </li>
+    <li><a href="https://www.w3.org/TR/2016/WD-html52-20161206/grouping-content.html" target="_blank"
+        rel="noopener noreferrer">Grouping</a> elements: (
+      <code>address</code>,
+      <code>blockquote</code>,
+      <code>dd</code>,
+      <code>dl</code>,
+      <code>div</code>,
+      <code>dt</code>,
+      <code>figcaption</code>,
+      <code>figure</code>,
+      <code>hr</code>,
+      <code>li</code>,
+      <code>main</code>,
+      <code>ol</code>,
+      <code>pre</code>,
+      <code>pre</code>,
+      <code>ul</code>
+      )
+    </li>
+    <li><a href="https://html.spec.whatwg.org/#text-level-semantics" target="_blank"
+        rel="noopener noreferrer">Text-level</a> semantics: (
+      <code>a</code>,
+      <code>abbr</code>,
+      <code>b</code>,
+      <code>br</code>,
+      <code>bdi</code>,
+      <code>bdo</code>,
+      <code>cite</code>,
+      <code>code</code>,
+      <code>data</code>,
+      <code>dfn</code>,
+      <code>em</code>,
+      <code>i</code>,
+      <code>kbd</code>,
+      <code>mark</code>,
+      <code>q</code>,
+      <code>ruby</code>,
+      <code>rt</code>,
+      <code>rp</code>,
+      <code>s</code>,
+      <code>samp</code>,
+      <code>small</code>,
+      <code>span</code>,
+      <code>sub</code>,
+      <code>sup</code>,
+      <code>strong</code>,
+      <code>time</code>,
+      <code>u</code>,
+      <code>var</code>,
+      <code>wbr</code>)
+    </li>
+  </ul>
+</body>
+
 </html>
