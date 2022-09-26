@@ -6,15 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
-  <title>RWD 4th edition</title>
+  <title>RWD 4th edition (notes)</title>
 </head>
 
 <body>
+  <button class="toggle"></button>
   <p>
     In 2010, Ethan Marcotte coined the term
     <a href="https://alistapart.com/article/responsive-web-design" target="_blank" rel="noopener noreferrer">responsive
       web design</a>
-    which is a unifified approach of three techniques:
+    which is a unified approach of three techniques:
   </p>
   <ul>
     <li>
@@ -153,6 +154,114 @@
       <code>wbr</code>)
     </li>
   </ul>
+
+  <p>
+    Keep only one <code>main</code> on each page and do not use it as a descendent child element of
+    <code>article</code>,
+    <code>aside</code>,
+    <code>header</code>,
+    <code>footer</code> or
+    <code>nav</code>
+  </p>
+  <p>
+    Use <code>section</code> as the wrapping element for visual components
+  </p>
+  <p>
+    For navigational elements replace <code>ul</code> with <code>nav</code> and <code>li</code> with <code>a</code>
+  </p>
+  <p>
+    The <a href="https://html.spec.whatwg.org/multipage/sections.html#outline" target="_blank"
+      rel="noopener noreferrer">outline</a> is all headings in a document, in tree order
+  </p>
+  <p>
+    Test the outline of your documents with https://gsnedders.html5.org/outliner or
+    https://hoyois.github.io/html5outliner
+  </p>
+  <p>
+    <a href="https://html.spec.whatwg.org/multipage/obsolete.html" target="_blank"
+      rel="noopener noreferrer">Obsolete</a> HTML features (<b>conforming</b> and <b>non-conforming</b>)
+  </p>
+  <p>
+    <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head" target="_blank"
+      rel="noopener noreferrer">Understanding levels of conformance for WCAG</a>
+  </p>
+  <p>
+    A paraphrased <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance" target="_blank"
+      rel="noopener noreferrer">summary</a> of WCAG
+  </p>
+  <p>
+    Quick <a href="https://www.w3.org/WAI/WCAG21/quickref" target="_blank" rel="noopener noreferrer">reference</a> to
+    WCAG
+  </p>
+  <p>
+    How to implement <a href="https://www.w3.org/WAI/standards-guidelines/aria" target="_blank"
+      rel="noopener noreferrer">ARIA</a>
+  </p>
+  <p>
+    Using <a href="https://www.w3.org/TR/using-aria" target="_blank" rel="noopener noreferrer">ARIA</a>
+  </p>
+
+  <p>
+    Set of <a href="https://www.w3.org/WAI/ARIA/apg/example-index" target="_blank" rel="noopener noreferrer">accessible
+      design patterns</a>
+  </p>
+  <p>
+    All things <a href="a11yproject.com" target="_blank" rel="noopener noreferrer">accessibility (a11y)</a>
+  </p>
+  <p>
+    To make the <code>video</code> tag responsive, remove any <code>height</code> and <code>width</code> attributes in
+    the markup then apply a CSS style:
+  <pre>
+      <code>
+        video {
+          max-width: 100%;
+          height: auto;
+        }
+      </code>
+    </pre>
+  </p>
+  <p>
+    For videos embedded within an <code>iframe</code>, correct the aspect ratio with Thierry Koblentz's <a
+      href="https://alistapart.com/article/creating-intrinsic-ratios-for-video" target="_blank"
+      rel="noopener noreferrer">technique</a> or with <a href="https://github.com/jeffehobbs/embedresponsively#about"
+      target="_blank" rel="noopener noreferrer">Embed Responsively</a>
+  </p>
+
+  <script>
+    /**
+     * https://notes.jordanscales.com/40ecf234
+     * */
+    const toggleBtn = document.querySelector('.toggle');
+
+    function setTheme(isDark) {
+      if (isDark) {
+        localStorage.setItem("theme", "dark");
+        document.body.classList.add("dark");
+        toggleBtn.innerHTML = "🌞";
+        toggleBtn.setAttribute("aria-label", "enable light theme");
+      } else {
+        localStorage.setItem("theme", "light");
+        document.body.classList.remove("dark");
+        toggleBtn.innerHTML = "🌙";
+        toggleBtn.setAttribute("aria-label", "enable dark theme");
+      }
+    }
+
+    function toggleTheme() {
+      localStorage.getItem("theme") === "dark" ? setTheme() : setTheme(true);
+    }
+
+    if (!localStorage.getItem("theme")) {
+      const osTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+      localStorage.setItem("theme", osTheme);
+    }
+
+    toggleBtn.onclick = toggleTheme;
+
+    setTheme(localStorage.getItem("theme") === "dark");
+  </script>
 </body>
 
 </html>
