@@ -1,0 +1,278 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>RWD 4th edition (notes)</title>
+</head>
+
+<body>
+    <button class="toggle" aria-label="enable dark theme">🌙</button>
+    <p>In 2010, Ethan Marcotte coined the term
+        <a href="https://alistapart.com/article/responsive-web-design" target="_blank"
+            rel="noopener noreferrer">responsive web design</a>
+        which is a unified approach of three techniques:
+    </p>
+    <ul>
+        <li>
+            <a href="https://github.com/benfrain/rwd4/tree/master/04" target="_blank" rel="noopener noreferrer">lexible
+                grid layout</a>
+        </li>
+        <li>
+            <a href="https://github.com/benfrain/rwd4/tree/master/09" target="_blank" rel="noopener noreferrer">flexible
+                images/media</a>
+        </li>
+        <li>
+            <a href="https://github.com/benfrain/rwd4/tree/master/03" target="_blank" rel="noopener noreferrer">media
+                queries</a>
+        </li>
+    </ul>
+    <p>The
+        <a href="https://web.dev/responsive-web-design-basics/#viewport" target="_blank" rel="noopener noreferrer">
+            viewport meta</a>
+        tag tells the browser how to render a web page
+    </p>
+    <p>For images prefer <em>max-width</em> instead of <em>width</em>:</p>
+    <pre><code>
+        img {
+          max-width: 100%;
+        }
+      </code></pre>
+    <p>Specifications for CSS Media Queries:
+        <a href="https://www.w3.org/TR/mediaqueries-3" target="_blank" rel="noopener noreferrer">level 3</a>;
+        <a href="https://drafts.csswg.org/mediaqueries-4" target="_blank" rel="noopener noreferrer">level 4</a>
+    </p>
+    <p>The
+        <a href="https://html.spec.whatwg.org/multipage" target="_blank" rel="noopener noreferrer">living standard</a>
+        of HTML
+    </p>
+    <p>The
+        <a href="https://html.spec.whatwg.org/multipage/syntax.html#void-elements" target="_blank"
+            rel="noopener noreferrer">void tags</a>
+        are: <code>area</code>, <code>base</code>, <code>br</code>,
+        <code>col</code>, <code>embed</code>, <code>hr</code>, <code>img</code>,
+        <code>input</code>, <code>link</code>, <code>meta</code>,
+        <code>param</code>, <code>param</code>, <code>source</code>,
+        <code>track</code> and
+        <code>wbr</code>
+    </p>
+    <p>Full list of
+        <a href="https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry" target="_blank"
+            rel="noopener noreferrer">languages</a>
+        for the <code>lang</code> attribute
+    </p>
+    <p>Pre-made "best practice" HTML5
+        <a href="https://github.com/h5bp/html5-boilerplate" target="_blank" rel="noopener noreferrer">file</a>
+    </p>
+    <p>Check if the markup is
+        <a href="https://validator.w3.org" target="_blank" rel="noopener noreferrer">valid</a>
+    </p>
+    <p><code>a</code>, <code>button</code>, <code>form</code> can not be wrapped
+        inside of an <code>a</code> tag
+    </p>
+    <p>Full list of HTML5
+        <a href="https://html.spec.whatwg.org/#semantics" target="_blank" rel="noopener noreferrer">elements</a>
+    </p>
+    <p>Group the HTML elements by specification:</p>
+    <ul>
+        <li>
+            <a href="https://www.w3.org/WAI/ARIA/apg/example-index/landmarks/HTML5.html" target="_blank"
+                rel="noopener noreferrer">Sectioning</a>
+            elements: ( <code>aside</code>, <code>footer</code>, <code>form</code>,
+            <code>header</code>, <code>main</code>, <code>nav</code>,
+            <code>section</code>)
+        </li>
+        <li>
+            <a href="https://www.w3.org/TR/2016/WD-html52-20161206/grouping-content.html" target="_blank"
+                rel="noopener noreferrer">Grouping</a>
+            elements: ( <code>address</code>, <code>blockquote</code>,
+            <code>dd</code>, <code>dl</code>, <code>div</code>, <code>dt</code>,
+            <code>figcaption</code>, <code>figure</code>, <code>hr</code>,
+            <code>li</code>, <code>main</code>, <code>ol</code>, <code>pre</code>,
+            <code>pre</code>,
+            <code>ul</code>
+            )
+        </li>
+        <li>
+            <a href="https://html.spec.whatwg.org/#text-level-semantics" target="_blank"
+                rel="noopener noreferrer">Text-level</a>
+            semantics: ( <code>a</code>, <code>abbr</code>, <code>b</code>,
+            <code>br</code>, <code>bdi</code>, <code>bdo</code>, <code>cite</code>,
+            <code>code</code>, <code>data</code>, <code>dfn</code>, <code>em</code>,
+            <code>i</code>, <code>kbd</code>, <code>mark</code>, <code>q</code>,
+            <code>ruby</code>, <code>rt</code>, <code>rp</code>, <code>s</code>,
+            <code>samp</code>, <code>small</code>, <code>span</code>,
+            <code>sub</code>, <code>sup</code>, <code>strong</code>,
+            <code>time</code>, <code>u</code>, <code>var</code>, <code>wbr</code>)
+        </li>
+    </ul>
+    <p>Keep only one <code>main</code> on each page and do not use it as a
+        descendent child element of <code>article</code>, <code>aside</code>,
+        <code>header</code>, <code>footer</code> or
+        <code>nav</code>
+    </p>
+    <p>Use <code>section</code> as the wrapping element for visual components
+    </p>
+    <p>For navigational elements replace <code>ul</code> with
+        <code>nav</code> and <code>li</code> with <code>a</code>
+    </p>
+    <p>The
+        <a href="https://html.spec.whatwg.org/multipage/sections.html#outline" target="_blank"
+            rel="noopener noreferrer">outline</a>
+        is all headings in a document, in tree order
+    </p>
+    <p>Test the outline of your documents with
+        https://gsnedders.html5.org/outliner or
+        https://hoyois.github.io/html5outliner
+    </p>
+    <p><a href="https://html.spec.whatwg.org/multipage/obsolete.html" target="_blank"
+            rel="noopener noreferrer">Obsolete</a>
+        HTML features (<b>conforming</b> and <b>non-conforming</b>)
+    </p>
+    <p>Understanding <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/conformance.html#uc-levels-head"
+            target="_blank" rel="noopener noreferrer">levels of conformance</a> for WCAG
+    </p>
+    <p>A paraphrased
+        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance" target="_blank"
+            rel="noopener noreferrer">summary</a>
+        of WCAG
+    </p>
+    <p>Quick
+        <a href="https://www.w3.org/WAI/WCAG21/quickref" target="_blank" rel="noopener noreferrer">reference</a>
+        to WCAG
+    </p>
+    <p>How to implement
+        <a href="https://www.w3.org/WAI/standards-guidelines/aria" target="_blank" rel="noopener noreferrer">ARIA</a>
+    </p>
+    <p>Using
+        <a href="https://www.w3.org/TR/using-aria" target="_blank" rel="noopener noreferrer">ARIA</a>
+    </p>
+
+    <p>Set of
+        <a href="https://www.w3.org/WAI/ARIA/apg/example-index" target="_blank" rel="noopener noreferrer">accessible
+            design patterns</a>
+    </p>
+    <p>All things
+        <a href="a11yproject.com" target="_blank" rel="noopener noreferrer">accessibility (a11y)</a>
+    </p>
+    <p>To make the <code>video</code> tag responsive, remove any
+        <code>height</code> and <code>width</code> attributes in the markup then
+        apply a CSS style:
+    </p>
+    <pre>      <code>
+        video {
+          max-width: 100%;
+          height: auto;
+        }
+      </code>
+    </pre>
+    <p>For videos embedded within an <code>iframe</code>, correct the aspect
+        ratio with Thierry Koblentz's
+        <a href="https://alistapart.com/article/creating-intrinsic-ratios-for-video" target="_blank"
+            rel="noopener noreferrer">technique</a>
+        or with
+        <a href="https://github.com/jeffehobbs/embedresponsively#about" target="_blank" rel="noopener noreferrer">Embed
+            Responsively</a>
+    </p>
+    <p>The modern way to embed iframes and keep aspect ratio is using
+        <a href="https://caniuse.com/mdn-css_properties_aspect-ratio" target="_blank"
+            rel="noopener noreferrer"><code>aspect-ratio</code></a>
+        CSS property:
+    </p>
+    <pre>        <code>
+          .iframe-16-9 {
+            aspect-ratio: 16/9;
+            max-width: 100%;
+          }
+        </code>
+      </pre>
+    <p>The <code>loading="lazy"</code> tells the browser to fetch the item with
+        this attribute only if the user scrolls it into view. The default is
+        <code>loading="eager"</code>
+    </p>
+    <p>
+        The <code>dialog</code> element has some accessibility
+        <a href="https://css-tricks.com/dialog-components-roll-your-own" target="_blank"
+            rel="noopener noreferrer">issues</a>. See it in
+        <a href="https://raw.githubusercontent.com/benfrain/rwd4/master/02/example_02-05.html" target="_blank"
+            rel="noopener noreferrer">action</a>
+    </p>
+    <p>Media queries in link tags:</p>
+    <pre>
+        <code>
+            &lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (orientation: portrait)&quot;
+            href=&quot;portrait-screen.css&quot; /&gt;
+            &lt;!-- or --&gt;
+            &lt;link rel=&quot;stylesheet&quot; media=&quot;not screen and (orientation: portrait)&quot;
+            href=&quot;portrait-screen.css&quot; /&gt;
+            &lt;!-- or --&gt;
+            &lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (orientation: portrait) and (min-width: 800px)&quot;
+            href=&quot;800wide-portrait-screen.css&quot; /&gt;
+            &lt;!-- or --&gt;
+            &lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (orientation: portrait) and (min-width: 800px),
+            projection&quot; href=&quot;800wide-portrait-screen.css&quot; /&gt;
+        </code>
+    </pre>
+    <p>Media query on an @import at-rule
+    </p>
+    <pre><code>
+        @import url("portrait-screen.css") screen and (orientation: portrait);
+    </code></pre>
+    <p>Media queries in a CSS file</p>
+    <pre><code>
+        @media screen and (orientation: portrait) {
+        /* styles here */
+        }
+    </code></pre>
+    <p>What can media queries <a href="https://www.w3schools.com/cssref/css3_pr_mediaquery.asp#:~:text=Media%20Features"
+            target="_blank" rel="noopener noreferrer">test</a> for?
+    </p>
+    <p>Features deprecated in CSS Media Queries <a href="https://www.w3.org/TR/mediaqueries-5/#mf-deprecated"
+            target="_blank" rel="noopener noreferrer">Level 5</a></p>
+    <p>Render <a href="https://web.dev/critical-rendering-path-render-blocking-css" target="_blank"
+            rel="noopener noreferrer">blocking</a> CSS</p>
+    <p>Specifications progress <b>Working Draft (WD)</b> -> <b>Candidate Recommendation (CR)</b> -> <b>Proposed
+            Recommendation (PR)</b> -> <b>Recommendation (REC)</b>. Explanation of the <a
+            href="https://www.w3.org/2005/10/Process-20051014/tr" target="_blank" rel="noopener noreferrer">standards
+            ratification</a> process</p>
+    <script>
+        /**
+         * https://notes.jordanscales.com/40ecf234
+         * */
+        const toggleBtn = document.querySelector(".toggle");
+
+        function setTheme(isDark) {
+            if (isDark) {
+                localStorage.setItem("theme", "dark");
+                document.body.classList.add("dark");
+                toggleBtn.innerHTML = "🌞";
+                toggleBtn.setAttribute("aria-label", "enable light theme");
+            } else {
+                localStorage.setItem("theme", "light");
+                document.body.classList.remove("dark");
+                toggleBtn.innerHTML = "🌙";
+                toggleBtn.setAttribute("aria-label", "enable dark theme");
+            }
+        }
+
+        function toggleTheme() {
+            localStorage.getItem("theme") === "dark" ? setTheme() : setTheme(true);
+        }
+
+        if (!localStorage.getItem("theme")) {
+            const osTheme = window.matchMedia("(prefers-color-scheme: dark)")
+                .matches
+                ? "dark"
+                : "light";
+            localStorage.setItem("theme", osTheme);
+        }
+
+        toggleBtn.onclick = toggleTheme;
+
+        setTheme(localStorage.getItem("theme") === "dark");
+    </script>
+</body>
+
+</html>

@@ -20,7 +20,7 @@ body.dark {
 }
 
 .toggle {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   padding: 5px;
@@ -34,7 +34,7 @@ body {
   background-color: var(--background-color);
   color: var(--font-color);
   margin: 0;
-  padding: 0;
+  padding: 1.8rem;
   font-family: "system-ui";
   line-height: 1.4;
 }
@@ -49,9 +49,10 @@ a:hover {
   border-bottom: 2px solid;
 }
 
-/* Disable text wrap */
-pre code {
-  padding: 1em 0 !important;
-  overflow: auto;
-  display: block;
+p::before {
+  content: "\270D";
+  display: inline-block;
+  margin-right: 0.2rem;
+  font-size: 1.4rem;
+  transform: rotateY(180deg);
 }
