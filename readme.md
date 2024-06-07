@@ -2,4 +2,4 @@
 - The code: [4th edition](https://github.com/benfrain/rwd4/archive/refs/heads/master.zip)
 - Packt's Discord [community](https://discord.com/invite/ETZTPmrQFX)
 - HTML [escape](https://www.freeformatter.com/html-escape.html)
-- Unicode character [table](https://unicode-table.com/en)
+- Unicode character [table](https://symbl.cc/en)
